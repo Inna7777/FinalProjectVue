@@ -3,7 +3,7 @@
   <footer class="footer center">
     <div class="footer_logo footer_blog">
       <div class="headerLine_logo">
-          <img src="../assets/imgheader/header_Logo.svg" alt="img" />
+          <img src="img/imgheader/header_Logo.svg" alt="img" />
           <p class="headerLine_logoText">Interno</p>
         </div>
  <p class="footer_p">It is a long established fact that a reader will be distracted lookings.</p>   
