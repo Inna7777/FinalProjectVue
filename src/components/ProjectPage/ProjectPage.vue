@@ -6,6 +6,8 @@
     <ProjectButtons @selectedTag='updateSelectedTag'/> 
     <!-- передаем полученное значение дочернему компоненту через пропсы -->
     <ProjectCarts  :selectedTag='parentSelectedTag'/>
+    <FooterComponent/>
+    
     </div>
 </template>
 
@@ -14,6 +16,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 import BlogBunner from '@/components/BlogPage/BlogBunner.vue'
 import ProjectButtons from '@/components/ProjectPage/ProjectButtons.vue'
 import ProjectCarts from '@/components/ProjectPage/ProjectCarts.vue'
+import FooterComponent from '@/components/FooterComponnent.vue'
 export default {
   name: 'ProjectPage',
 
@@ -21,7 +24,8 @@ export default {
     HeaderComponent,
     BlogBunner,
     ProjectButtons,
-    ProjectCarts
+    ProjectCarts,
+    FooterComponent
   },
 
   data() {
