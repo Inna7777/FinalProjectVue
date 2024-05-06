@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderComponent/>
-    <BlogBunner/>
+    <BlogBunner :banner='banner'/>
     <BlogPost/>
     <BlogCart :blogItems='carts'/>
     <FooterComponent/>
@@ -28,6 +28,10 @@ export default {
 
   data() {
     return {
+        banner:[
+           { id:1, imgUrl:'/img/imgblogpage/buner_blog.jpg', title:'Articles & News', hrev1:'Home/', hrev2: 'Blog' } ,
+            
+        ],      
       carts:[]      
     };
   },

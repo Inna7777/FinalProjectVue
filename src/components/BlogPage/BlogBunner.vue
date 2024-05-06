@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="bunnerBlog">
-      <img class="bunnerBlog_img" :src='addressUrl' alt="img" />
+      <img class="bunnerBlog_img" :src='banner[0].imgUrl' alt="img" />
       <div class="bunnerBlog_info">
-        <h3 class="bunnerBlog_info_tituleContent">Articles & News</h3>
+        <h3 class="bunnerBlog_info_tituleContent">{{banner[0].title}}</h3>
         <div class="bunnerBlog_hrefs">
-          <a href="#">Home /</a>
-          <a href="#">Blog</a>
+          <a href="#">{{banner[0].hrev1}}</a>
+          <a href="#">{{banner[0].hrev2}}</a>
         </div>
       </div>
     </div>
@@ -17,10 +17,20 @@
 
 export default {
   name: 'BlogBunner',
+   props:{
+    banner:{
+      type: Array,
+      default() { 
+        return []
+      }
+    }
+
+  },
+
 
   data() {
     return {
-        addressUrl:'/img/imgblogpage/buner_blog.jpg'      
+           
       
     };
   },
