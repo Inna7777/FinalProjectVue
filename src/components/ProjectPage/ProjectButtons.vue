@@ -40,12 +40,13 @@ export default {
   display: flex;
   justify-content: center;
   margin-top: 200px;
+  gap: 10px;
 }
 .button {
   width: 219px;
 height: 75px;
 padding: 26px 66px 26px 66px;
-gap: 10px;
+
 border: none;
 border-radius: 18px ;
 opacity: 0px;
