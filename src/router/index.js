@@ -4,6 +4,7 @@ import MainPage from '../components/MainPage.vue'
 import BlogPage from '../components/BlogPage/BlogPage.vue'
 import ProjectPage from '../components/ProjectPage/ProjectPage.vue'
 import DetailsPage from '../components/ProjectDetails/DetailsPage.vue'
+import NotFound from '../components/NotFound.vue'
 
 Vue.use(Router)
 
@@ -29,6 +30,15 @@ export default new Router({
         path:'/detailspage',
         name:'detailspage',
         component: DetailsPage
+    },
+    {
+        path:'/404',
+        name:'NotFound',
+        component: NotFound
+    },
+    {
+        path:'*',
+        redirect:'/404'
     },
     
 
