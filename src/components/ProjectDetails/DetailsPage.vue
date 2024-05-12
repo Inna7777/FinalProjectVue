@@ -1,40 +1,26 @@
 <template>
   <div>
-    <HeaderComponent/>
-    <DetailSlider/>
-    <FooterComponnent/>
+    <DetailSlider />
   </div>
 </template>
 
 <script>
-import HeaderComponent from '../HeaderComponent.vue';
-import FooterComponnent  from '../FooterComponnent.vue'
-import DetailSlider  from '../ProjectDetails/DetailSlider.vue'
+import DetailSlider from "../ProjectDetails/DetailSlider.vue";
 
 export default {
-  name: 'DetailsPage',
-  components:{
-      HeaderComponent,
-      DetailSlider,
-      FooterComponnent   
+  name: "DetailsPage",
+  components: {
+    DetailSlider,
   },
 
   data() {
-    return {
-      
-    };
+    return {};
   },
 
-  mounted() {
-    
-  },
+  mounted() {},
 
-  methods: {
-    
-  },
+  methods: {},
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

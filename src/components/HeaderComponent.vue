@@ -2,16 +2,16 @@
   <div class="center">
     <div class="headerLine">
       <div class="headerLine_logo">
-        <img :src= 'path' alt="img" />
+        <img :src="path" alt="img" />
         <p class="headerLine_logoText">Interno</p>
       </div>
       <div class="headerLine_bredCrambs">
-        <a
+        <router-link
           v-for="crumb in crumbs"
           :key="crumb.id"
           class="crumbs"
-          :href="crumb.hrefCramb"
-          >{{ crumb.nameCrumb }}</a
+          :to="crumb.to"
+          >{{ crumb.nameCrumb }}</router-link
         >
       </div>
     </div>
@@ -25,11 +25,12 @@ export default {
   data() {
     return {
       crumbs: [
-        { id: 0, nameCrumb: "Home /", hrefCramb: "#" },
-        { id: 1, nameCrumb: "Project /", hrefCramb: "#" },
-        { id: 2, nameCrumb: "Blog", hrefCramb: "#" },
+        { id: 0, nameCrumb: "Home /", to: "/mainpage" },
+        { id: 1, nameCrumb: "Project /", to: "/projectpage" },
+        { id: 2, nameCrumb: "Blog /", to: "/blogpage" },
+        { id: 3, nameCrumb: "Details /", to: "/detailspage" },
       ],
-      path:'../img/imgheader/header_Logo.svg'
+      path: "../img/imgheader/header_Logo.svg",
     };
   },
 
@@ -61,7 +62,7 @@ export default {
   font-weight: 400;
   line-height: 50px;
   padding-left: 10px;
-  color: #292F36;
+  color: #292f36;
 }
 .headerLine_bredCrambs {
   display: flex;
@@ -71,12 +72,11 @@ export default {
 }
 .headerLine .crumbs {
   text-decoration: none;
-  color: #292F36;
+  color: #292f36;
   font-family: Jost;
   font-size: 20px;
   font-weight: 400;
   line-height: 25px;
   text-align: center;
 }
-
 </style>

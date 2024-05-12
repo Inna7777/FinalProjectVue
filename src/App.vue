@@ -1,25 +1,23 @@
 <template>
   <div id="app">
-    <!-- <MainPage/> -->
-    <!-- <BlogPage/> -->
-    <!-- <ProjectPage/> -->
-    <DetailsPage/>
-    </div>
+    <HeaderComponent />
+    <router-view />
+    <FooterComponnent />
+  </div>
 </template>
 
 <script>
-// import BlogPage from './components/BlogPage/BlogPage.vue'
-// import MainPage from './components/MainPage.vue'
-// import ProjectPage from './components/ProjectPage/ProjectPage.vue'
-import DetailsPage from './components/ProjectDetails/DetailsPage.vue'
+import HeaderComponent from "./components/HeaderComponent.vue";
+import FooterComponnent from "./components/FooterComponnent.vue";
 
 export default {
   name: "App",
   components: {
-    // MainPage
-    // BlogPage
-    // ProjectPage
-    DetailsPage
+    HeaderComponent,
+    FooterComponnent,
+  },
+  created() {
+    this.$router.push({ name: "mainpage" });
   },
 };
 </script>

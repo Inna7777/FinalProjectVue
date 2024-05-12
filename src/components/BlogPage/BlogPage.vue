@@ -1,66 +1,88 @@
 <template>
   <div>
-    <HeaderComponent/>
-    <BlogBunner :banner='banner'/>
-    <BlogPost/>
-    <BlogCart :blogItems='carts'/>
-    <FooterComponent/>
-    
+    <BlogBunner :banner="banner" />
+    <BlogPost />
+    <BlogCart :blogItems="carts" />
   </div>
 </template>
 
 <script>
-import HeaderComponent from '../HeaderComponent.vue'
-import BlogBunner from '../BlogPage/BlogBunner.vue'
-import BlogPost from '../BlogPage/BlogPost.vue'
-import FooterComponent from '../FooterComponnent.vue'
-import BlogCart from '../BlogPage/BlogCart.vue'
-export default {
-  name: 'BlogPage',
+import BlogBunner from "../BlogPage/BlogBunner.vue";
+import BlogPost from "../BlogPage/BlogPost.vue";
 
-   components: {
-    HeaderComponent,
+import BlogCart from "../BlogPage/BlogCart.vue";
+export default {
+  name: "BlogPage",
+
+  components: {
     BlogBunner,
     BlogPost,
     BlogCart,
-    FooterComponent
   },
 
   data() {
     return {
-        banner:[
-           { id:1, imgUrl:'/img/imgblogpage/buner_blog.jpg', title:'Articles & News', hrev1:'Home/', hrev2: 'Blog' } ,
-            
-        ],      
-      carts:[]      
+      banner: [
+        {
+          id: 1,
+          imgUrl: "/img/imgblogpage/buner_blog.jpg",
+          title: "Articles & News",
+          hrev1: "Home/",
+          hrev2: "Blog",
+        },
+      ],
+      carts: [],
     };
   },
 
-  mounted() {
-      
-  },
+  mounted() {},
 
   methods: {
-    fetchData(){
-      return[
-        
-            {image:'/img/imgblogpage/blog_Image1.jpg', categoria:'Kitchan Design', titul:'Let’s Get Solution For Building Construction Work', date:'26 December,2022'},
-            {image:'/img/imgblogpage/blog_Image2.jpg', categoria:'Kitchan Design', titul:'Let’s Get Solution For Building Construction Work', date:'26 December,2022'},
-            {image:'/img/imgblogpage/blog_Image3.jpg', categoria:'Kitchan Design', titul:'Let’s Get Solution For Building Construction Work', date:'26 December,2022'},
-            {image:'/img/imgblogpage/blog_Image4.jpg', categoria:'Kitchan Design', titul:'Let’s Get Solution For Building Construction Work', date:'26 December,2022'},
-            {image:'/img/imgblogpage/blog_Image5.jpg', categoria:'Kitchan Design', titul:'Let’s Get Solution For Building Construction Work', date:'26 December,2022'},
-            {image:'/img/imgblogpage/blog_Image6.jpg', categoria:'Kitchan Design', titul:'Let’s Get Solution For Building Construction Work', date:'26 December,2022'},
-        ]
-      
-    }
+    fetchData() {
+      return [
+        {
+          image: "/img/imgblogpage/blog_Image1.jpg",
+          categoria: "Kitchan Design",
+          titul: "Let’s Get Solution For Building Construction Work",
+          date: "26 December,2022",
+        },
+        {
+          image: "/img/imgblogpage/blog_Image2.jpg",
+          categoria: "Kitchan Design",
+          titul: "Let’s Get Solution For Building Construction Work",
+          date: "26 December,2022",
+        },
+        {
+          image: "/img/imgblogpage/blog_Image3.jpg",
+          categoria: "Kitchan Design",
+          titul: "Let’s Get Solution For Building Construction Work",
+          date: "26 December,2022",
+        },
+        {
+          image: "/img/imgblogpage/blog_Image4.jpg",
+          categoria: "Kitchan Design",
+          titul: "Let’s Get Solution For Building Construction Work",
+          date: "26 December,2022",
+        },
+        {
+          image: "/img/imgblogpage/blog_Image5.jpg",
+          categoria: "Kitchan Design",
+          titul: "Let’s Get Solution For Building Construction Work",
+          date: "26 December,2022",
+        },
+        {
+          image: "/img/imgblogpage/blog_Image6.jpg",
+          categoria: "Kitchan Design",
+          titul: "Let’s Get Solution For Building Construction Work",
+          date: "26 December,2022",
+        },
+      ];
+    },
   },
   created() {
-    this.carts = this.fetchData()
-    
+    this.carts = this.fetchData();
   },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
